@@ -1,0 +1,50 @@
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    text-align: center;
+    color: hsl(45, 100%, 72%);
+}
+
+body {
+    background-color: hsl(0, 0%, 7%);
+    text-align: center;
+    color: hsl(45, 100%, 72%);
+  }
+
+.button {
+    font: inherit;
+    width: 25%;
+    background: hsl(45, 40%, 76%);;
+    border: 1px hsl(35, 18%, 55%);
+    text-align: center;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 16px 30px hsla(1, 0%, 0%, 0.25);
+    cursor: pointer;
+  }
+  
+#gameContainer{
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 50%;
+    background: hsla(14, 180%, 36%, 0.35);
+    backdrop-filter: blur(10px);
+    border: 1px hsl(0, 0%, 22%);
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 16px 30px hsla(0, 70%, 36%, 0.25);
+    z-index: 5;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
