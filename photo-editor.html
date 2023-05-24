@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Photo Album/Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-HKZ1dGOcyxQxG+ElbyyjJgItIW5b5e5wk5CG+dnWFR6MvU6ZjKmCD9mFjj3Y8Vv1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-fKj4a0tLgJt/fj+OHNgzDbt0rJGbiOrakYdJ+rO1+0Fm12ZPyJNKBuxb3G9Ce/jQ"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap" rel="stylesheet">
+
+    <style>
+        img:hover {
+            transform: scale(120%);
+            transition: 0.5s;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: #f97068;font-family: Poppins; ">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="container-fluid"
+        style="height: 200%; background-color: #212738;padding-bottom: 5%;padding-left: 5%;padding-right: 5%;">
+        <h1 style="font-family: Poppins; color: whitesmoke; text-align: center; padding-top: 5%; padding-bottom: 5%;">
+             <span style="font-weight: bold;">MY MOVIE RECCOMMENDATIONS </span> 
+
+    </div>
+
+    <div style="padding-top: 5%; padding-bottom: 5%;padding-left: 5%;padding-right: 5%;">
+        <div class="row container">
+            <div class="col-10 col-md-6 col-sm-10 col-lg-6 col-xl-3 ">
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseNewYork"
+                        aria-expanded="false" aria-controls="collapseNewYork">
+                        <img src="./photos/1.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="New York" />
+                    </button>
+                    <div class="collapse" id="collapseNewYork">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseLA"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/2.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Las Vegas" />
+                    </button>
+                    <div class="collapse" id="collapseLA">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsePa"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/3.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Paris" />
+                    </button>
+                    <div class="collapse" id="collapsePa">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseGoa"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/8.jpeg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Goa" />
+                    </button>
+                    <div class="collapse" id="collapseGoa">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseDb"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/3.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Dubai" />
+                    </button>
+                    <div class="collapse" id="collapseDb">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-md-10 col-sm-10 col-lg-6 col-xl-3 ">
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsetk"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/4.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Tokyo" />
+                    </button>
+                    <div class="collapse" id="collapsetk">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsetnt"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/5.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Toronto" />
+                    </button>
+                    <div class="collapse" id="collapsetnt">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsech"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/19.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Great w" />
+                    </button>
+                    <div class="collapse" id="collapsech">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseld"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/6.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="London" />
+                    </button>
+                    <div class="collapse" id="collapseld">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseam"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/7.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Amsterdam" />
+                    </button>
+                    <div class="collapse" id="collapseam">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-md-10 col-sm-10 col-lg-6 col-xl-3 ">
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseka"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/9.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Kashmir" />
+                    </button>
+                    <div class="collapse" id="collapseka">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsesp"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/10.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Spain" />
+                    </button>
+                    <div class="collapse" id="collapsesp">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseman"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/11.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Manali" />
+                    </button>
+                    <div class="collapse" id="collapseman">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsemal"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/12.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Maldives" />
+                    </button>
+                    <div class="collapse" id="collapsemal">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsegl"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/13.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Greenland" />
+                    </button>
+                    <div class="collapse" id="collapsegl">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-md-10 col-sm-10 col-lg-6 col-xl-3 ">
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsehk"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/14.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Disneyland Hong Kong" />
+                    </button>
+                    <div class="collapse" id="collapsehk">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseba"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/15.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Bali" />
+                    </button>
+                    <div class="collapse" id="collapseba">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsesy"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/16.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Sydney" />
+                    </button>
+                    <div class="collapse" id="collapsesy">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsemon"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/17.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Monaco" />
+                    </button>
+                    <div class="collapse" id="collapsemon">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapsesin"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/18.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Singapore" />
+                    </button>
+                    <div class="collapse" id="collapsesin">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" style="margin-top: 5%; margin-bottom: 5%;">
+                    <button type="button" class="btn btn-link" data-bs-toggle="collapse" href="#collapseld"
+                        aria-expanded="false" aria-controls="collapseLA">
+                        <img src="./photos/20.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="London" />
+                    </button>
+                    <div class="collapse" id="collapseld">
+                        <div class="card card-body">
+                            <h5 style="text-align: center;">Edit Image</h5>
+                            <button class="btn btn-dark grayscale-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Convert to Grey-Scale</button>
+                            <button class="btn btn-danger red-btn" style="margin-top: 3%; margin-bottom: 3%;">Make the
+                                Image "RED"</button>
+                            <button class="btn btn-outline-secondary blur-btn"
+                                style="margin-top: 3%; margin-bottom: 3%;">Make the Image Blurred</button>
+                                <button class="btn btn-info bright-btn" style="margin-top: 3%; margin-bottom: 3%;">Brighten the
+                                    Image</button>
+                            <button class="btn btn-warning dull-btn" style="margin-top: 3%; margin-bottom: 3%;">Dull the
+                                Image</button>
+                                <button class="btn trns-btn" style="margin-top: 3%; margin-bottom: 3%;background-color: rgb(205, 205, 205);">Make the Image Translucent</button>
+                            <button class="btn btn-link restore-btn" style="margin-top: 3%; margin-bottom: 3%;">Restore
+                                the Image</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        //Grey-Scale convert
+        let greyscaleConvert = Array.from(document.getElementsByClassName("grayscale-btn"))
+        let imageArr = Array.from(document.getElementsByTagName("img"))
+        greyscaleConvert.forEach((item) => {
+            item.addEventListener("click", function () {
+                console.log(greyscaleConvert.indexOf(item))
+                imageArr[greyscaleConvert.indexOf(item)].style.filter = "grayscale(100%)";
+            })
+        })
+
+        //Make Image Red
+        let redConvert = Array.from(document.getElementsByClassName("red-btn"));
+
+        redConvert.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[redConvert.indexOf(item)].style.filter = "brightness(50%) sepia(100%) saturate(1500%)";
+            });
+        });
+
+
+        //Make Image Blur
+        let blurConvert = Array.from(document.getElementsByClassName("blur-btn"));
+
+        blurConvert.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[blurConvert.indexOf(item)].style.filter = "blur(4px)";
+            });
+        });
+
+        //Make Image Dull
+        let dullConvert = Array.from(document.getElementsByClassName("dull-btn"));
+
+        dullConvert.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[dullConvert.indexOf(item)].style.filter = "saturate(50%) brightness(50%)";
+            });
+        });
+
+        //Make the Image bright
+        let brightConvert = Array.from(document.getElementsByClassName("bright-btn"));
+
+        brightConvert.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[brightConvert.indexOf(item)].style.filter = "saturate(100%) brightness(200%)";
+            });
+        });
+
+        //Reduce Image opacity
+        let translucent = Array.from(document.getElementsByClassName("trns-btn"));
+
+        translucent.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[translucent.indexOf(item)].style.filter = "opacity(50%)";
+            });
+        });
+
+
+        //Restore the image
+        let restore = Array.from(document.getElementsByClassName("restore-btn"));
+
+        restore.forEach((item) => {
+            item.addEventListener("click", function () {
+                imageArr[restore.indexOf(item)].style.filter = "saturate(100%) brightness(100%)";
+            });
+        });
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

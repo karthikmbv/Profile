@@ -1,0 +1,34 @@
+// Flex
+
+@mixin flex ($direction, $just, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-items: $align;
+}
+
+// Multidevice
+
+@mixin device ($punto) {
+    @if ( $punto == bigscreen ) {
+        @media (min-width: 1201px) {
+            @content;
+        }
+    }
+    @else if ( $punto == laptop ){
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if ( $punto == tablet ) {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+    @else if ( $punto == movil ) {
+        @media (max-width: 560px) {
+            @content;
+        }
+    }
+}
+

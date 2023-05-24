@@ -1,0 +1,187 @@
+@import '_reset' , '_mixins';
+
+$almostColor : #ffe570;
+$almostColorText : #932d2d51;
+$correctColor : #79d569;
+$correctColorText : #26252551;
+$usedColor :#464C55;
+$usedColorText : #ffffff76;
+$defaultColor : #303741;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #252C37;
+}
+
+// GENERAL STYLES
+p {
+    font-size: 1rem;
+    color: rgb(53, 59, 71);
+}
+
+// COMMON TO GAMES
+.game {
+    width: 100%;
+    height: 100vh;
+    @include flex (column, center, center);
+    @include device(movil){
+        height: auto;
+    }
+    &__box {
+        @include flex (column, center, center);
+        position: relative;
+        gap: 1rem;
+        padding: 2rem;
+        overflow: hidden;
+        @include device(movil){
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            padding: 1rem;
+        }
+    } 
+}
+
+// WORDLEE
+.wordlee {
+    &__info {
+        color: white;
+    }
+    &__box {
+        position: relative;
+        @include flex (column, center, center);
+        gap: 2rem;
+    }
+    &__panel {
+        display: flex;
+        @include flex (column, center, center);
+        gap: 0.6rem;
+        .panel {
+            &__row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                gap: 0.6rem;
+                .row {
+                    &__tile {
+                        border-radius: 0.6rem;
+                        width: 4rem;
+                        height: 4rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #ffffff5a;
+                        user-select: none;
+                        color: white;
+                        cursor: pointer;
+                        font-size: 1.6rem;
+                        @include device (movil){
+                            width: 3.5rem;
+                            height: 3.5rem;
+                        }
+                        &.selected {
+                            border: 2px solid #7185c3;
+                        }
+                        &.used {
+                            background-color: $usedColor;
+                            border: 1px solid $usedColor;
+                            color: $usedColorText;
+                        }
+                        &.almost {
+                            background-color: $almostColor;
+                            border: 1px solid $almostColor;
+                            color: $almostColorText;
+                        }
+                        &.correct {
+                            background-color: $correctColor;
+                            border: 1px solid $correctColor;
+                            color: $correctColorText;
+                        }
+                        &.inactive {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__keyboard {
+        display: grid;
+        width: 500px;
+        height: 200px;
+        grid-template-columns: repeat(10,1fr);
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        @include device (movil){
+            width: 100%;
+            height: 150px;
+        }
+        .keyboard {
+            &__key {
+                background-color:$defaultColor;
+                @include flex (column, center, center);
+                border-radius: 0.6rem;
+                cursor: pointer;
+                user-select: none;
+                color: #ffffffc2;
+                position: relative;
+                border: none;
+                outline: none;
+                font-weight: bold;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(255, 255, 255, 0.318);
+                    border-radius: 0.3rem;
+                    display: none;
+                }
+                &.key {
+                    &__enter {
+                        grid-column: span 2;
+                    }
+                }
+                &.used {
+                    background-color: $usedColor;
+                    color: $usedColorText;
+                }
+                &.almost {
+                    background-color: $almostColor;
+                    color: $almostColorText;
+                }
+                &.correct {
+                    background-color: $correctColor;
+                    color: $correctColorText;
+                }
+                &:hover {
+                    &::after {
+                        display: block;
+                    }
+                }
+                &.inactive {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
